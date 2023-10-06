@@ -8,15 +8,15 @@ public class MaxAndMinElement {
         }
 
         char maxChar = input.chars()
-                .mapToObj(c -> (char)c)
-                .max(Character::compareTo)
-                .get();
+                        .mapToObj(c-> (char)c)
+                                .max(Character::compareTo)
+                                        .get();
 
 
         char minChar = input.chars()
-                .mapToObj(c -> (char) c)
-                .min(Character::compareTo)
-                .get();
+                        .mapToObj(c->(char)c)
+                                .min(Character::compareTo)
+                                        .get();
 
 
         System.out.println(input);

@@ -1,27 +1,21 @@
 public class RemoveDuplicatesCharsFromArray {
     public static void main(String[] args) {
-        String input = "He@llo World @";
+        String input = "He@llo World\t@";
 
-        char[] chars = input.toCharArray();
+       char[] chars = input.toCharArray();
 
-        boolean[] seen = new boolean[256];
-
-        int uniqueIndex = 0;
-
-        for(int i = 0; i < chars.length; i++){
-            char currentChar = chars[i];
-
-            if(!seen[currentChar]){
-                chars[uniqueIndex++] = currentChar;
-                seen[currentChar] = true;
-            }
-        }
-
-
-        String uniqueString = new String(chars, 0, uniqueIndex);
-        System.out.println("Original String: " + input);
-        System.out.println("String with Duplicate Characters Removed: " +uniqueString);
-
-
+       boolean[] seen = new boolean[256];
+       System.out.println("Input string:\""+ input+ "\"");
+       System.out.print("unique String:\"");
+       for (int i = 0; i<chars.length;i++){
+           char currentChar  = chars[i];
+           if(!seen[currentChar]){
+               seen[currentChar] = true;
+               System.out.print(currentChar);
+           }
+       }
+        System.out.print("\"");
     }
 }
+
+

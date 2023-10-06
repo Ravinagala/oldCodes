@@ -5,17 +5,16 @@ import java.util.function.Supplier;
 
 public class BuiltInFunctionalInterfaces {
     public static void main(String[] args) {
-        Consumer<String> c = (s) -> System.out.println(s.toLowerCase());
+        Consumer<String> c = (s) -> System.out.println(s.toLowerCase()); // for forEach() method
         c.accept("RAVI");
 
-        Predicate<String> p = (s) -> (s.length() > 5);
+        Predicate<String> p = (s) -> (s.length() > 5); // for filter() method
         System.out.println(p.test("Niranjan"));
 
-        Function<String,Integer> f = (s) -> s.length();
+        Function<String,Integer> f = (s) -> s.length(); // for maps(map,mapToDouble etc..) method
         System.out.println(f.apply("ABC"));
 
         Supplier<Integer> sp = () -> (int) (Math.random() * 100);
         System.out.println(sp.get());
-
     }
 }

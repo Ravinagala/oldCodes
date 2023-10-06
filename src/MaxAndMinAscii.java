@@ -1,6 +1,6 @@
 public class MaxAndMinAscii {
     public static void main(String[] args) {
-        String input = "HELLO ravi";
+        String input = "HELLO\nravi";
 
         if(input.isEmpty()){
             System.out.println("The String is empty");
@@ -8,12 +8,10 @@ public class MaxAndMinAscii {
         }
 
         int maxascii = input.chars()
-                .max()
-                .getAsInt();
+                .max().getAsInt();
 
         int minascii = input.chars()
-                .min()
-                .getAsInt();
+                .min().getAsInt();
 
 
         char maxchar = (char) maxascii;

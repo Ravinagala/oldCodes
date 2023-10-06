@@ -3,10 +3,13 @@ import java.util.Arrays;
 public class CharacterExisting {
     public static void main(String[] args) {
         String s = "Ravi";
-        char character = 'a';
+        char character = 'A';
+
+        char charToLowerCase = Character.toLowerCase(character);
 
         boolean exists = s.chars()
-                .anyMatch(ch -> ch == character);
+
+                .anyMatch(ch -> ch == charToLowerCase);
 
         System.out.println("Original String: " + s);
         System.out.println("Character to Check: " + character);
