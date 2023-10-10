@@ -31,6 +31,9 @@ public class SmallestAndLargestElements {
         long count = al.stream().count();
         System.out.println(count);
 
+        double average = al.stream().mapToInt(Integer::intValue).average().getAsDouble();
+        System.out.println(average);
+
         List<Integer> distinct = al.stream().distinct().collect(Collectors.toList());
         System.out.println(distinct);
 
